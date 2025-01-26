@@ -4,9 +4,10 @@
   "description": "job board server",
   "main": "src/index.js",
   "scripts": {
-    "dev":"nodemon index.js",
-    "start":"node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "author": "prajjwal shukla",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
     "nodemailer": "^6.10.0"
   },
   "devDependencies": {
