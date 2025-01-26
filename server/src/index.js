@@ -4,6 +4,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const connectDB = require("./config/db.js");
 const errorHandler = require("./middleware/errorMiddleware.js");
+const authRoutes= require("./routes/authRoutes.js")
 
 
 connectDB();
@@ -22,6 +23,7 @@ app.get("/health", (req, res) => {
 });
 
 app.use(errorHandler);
+app.use("/api/auth",authRoutes)
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
